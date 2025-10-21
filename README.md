@@ -83,7 +83,6 @@ This RFID-based attendance system automatically records student attendance when 
 ### For Microcontroller:
 - Keil μVision IDE
 - 8051 compiler
-- Flash magic (for programming)
 
 ### For Python Scripts:
 - Python 3.6 or higher
