@@ -44,7 +44,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Hardware Connections
 
-### _LCD (16x2) Connections - _
+### LCD (16x2) Connections - 
 
 | LCD Pin | Connection |
 |---------|------------|
