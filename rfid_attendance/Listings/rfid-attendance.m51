@@ -1,0 +1,349 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    10/19/2025  00:24:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\rfid-attendance.obj TO .\Objects\rfid-attendance PRINT (.\Listings\rfid-attendance
+>> .m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\rfid-attendance.obj (RFID_ATTENDANCE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+
+
+LINK MAP OF MODULE:  .\Objects\rfid-attendance (RFID_ATTENDANCE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         _DATA_GROUP_
+            IDATA   001EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00E0H     UNIT         ?PR?_CHECKSTUDENT?RFID_ATTENDANCE
+            CODE    08E0H     00BFH     UNIT         ?CO?RFID_ATTENDANCE
+            CODE    099FH     005BH     UNIT         ?PR?_STRCMP_CODE?RFID_ATTENDANCE
+            CODE    09FAH     005AH     UNIT         ?PR?MAIN?RFID_ATTENDANCE
+            CODE    0A54H     0031H     UNIT         ?PR?_DELAY_MS?RFID_ATTENDANCE
+            CODE    0A85H     002BH     UNIT         ?PR?_LCD_STRING?RFID_ATTENDANCE
+            CODE    0AB0H     0027H     UNIT         ?PR?LCD_INIT?RFID_ATTENDANCE
+            CODE    0AD7H     0025H     UNIT         ?PR?_UART_STRING?RFID_ATTENDANCE
+            CODE    0AFCH     001CH     UNIT         ?PR?_LCD_COMMAND?RFID_ATTENDANCE
+            CODE    0B18H     001CH     UNIT         ?PR?_LCD_CHAR?RFID_ATTENDANCE
+            CODE    0B34H     0019H     UNIT         ?C?LIB_CODE
+            CODE    0B4DH     000CH     UNIT         ?PR?LCD_CLEAR?RFID_ATTENDANCE
+            CODE    0B59H     000CH     UNIT         ?PR?UART_INIT?RFID_ATTENDANCE
+            CODE    0B65H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0B71H     0008H     UNIT         ?PR?UART_READ?RFID_ATTENDANCE
+            CODE    0B79H     0008H     UNIT         ?PR?_UART_WRITE?RFID_ATTENDANCE
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\rfid-attendance (RFID_ATTENDANCE)
+
+
+SEGMENT                                     DATA_GROUP 
+  +--> CALLED SEGMENT                     START    LENGTH
+---------------------------------------------------------
+?C_C51STARTUP                             -----    -----
+  +--> ?PR?MAIN?RFID_ATTENDANCE
+
+?PR?MAIN?RFID_ATTENDANCE                  0008H    000DH
+  +--> ?PR?LCD_INIT?RFID_ATTENDANCE
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/19/2025  00:24:15  PAGE 2
+
+
+  +--> ?PR?UART_INIT?RFID_ATTENDANCE
+  +--> ?CO?RFID_ATTENDANCE
+  +--> ?PR?_LCD_STRING?RFID_ATTENDANCE
+  +--> ?PR?_LCD_COMMAND?RFID_ATTENDANCE
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+  +--> ?PR?LCD_CLEAR?RFID_ATTENDANCE
+  +--> ?PR?UART_READ?RFID_ATTENDANCE
+  +--> ?PR?_CHECKSTUDENT?RFID_ATTENDANCE
+
+?PR?LCD_INIT?RFID_ATTENDANCE              -----    -----
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+  +--> ?PR?_LCD_COMMAND?RFID_ATTENDANCE
+
+?PR?_LCD_COMMAND?RFID_ATTENDANCE          0018H    0001H
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+
+?PR?_LCD_STRING?RFID_ATTENDANCE           0018H    0003H
+  +--> ?CO?RFID_ATTENDANCE
+  +--> ?PR?_LCD_CHAR?RFID_ATTENDANCE
+
+?PR?_LCD_CHAR?RFID_ATTENDANCE             001BH    0001H
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+
+?PR?LCD_CLEAR?RFID_ATTENDANCE             -----    -----
+  +--> ?PR?_LCD_COMMAND?RFID_ATTENDANCE
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+
+?PR?_CHECKSTUDENT?RFID_ATTENDANCE         0015H    0003H
+  +--> ?PR?LCD_CLEAR?RFID_ATTENDANCE
+  +--> ?CO?RFID_ATTENDANCE
+  +--> ?PR?_STRCMP_CODE?RFID_ATTENDANCE
+  +--> ?PR?_LCD_STRING?RFID_ATTENDANCE
+  +--> ?PR?_LCD_COMMAND?RFID_ATTENDANCE
+  +--> ?PR?_UART_STRING?RFID_ATTENDANCE
+  +--> ?PR?_DELAY_MS?RFID_ATTENDANCE
+
+?PR?_STRCMP_CODE?RFID_ATTENDANCE          0018H    0006H
+
+?PR?_UART_STRING?RFID_ATTENDANCE          0018H    0003H
+  +--> ?PR?_UART_WRITE?RFID_ATTENDANCE
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\rfid-attendance (RFID_ATTENDANCE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        RFID_ATTENDANCE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00B0H.3       PUBLIC        EN
+  C:0AD7H         PUBLIC        _UART_String
+  C:09A5H         PUBLIC        _strcmp_code
+  B:0098H.0       PUBLIC        RI
+  C:0B71H         PUBLIC        UART_Read
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/19/2025  00:24:15  PAGE 3
+
+
+  B:0098H.1       PUBLIC        TI
+  C:0B4DH         PUBLIC        LCD_Clear
+  B:00B0H.2       PUBLIC        RS
+  C:09FAH         PUBLIC        main
+  C:0951H         PUBLIC        student1_ID
+  C:095EH         PUBLIC        student2_ID
+  C:0B79H         PUBLIC        _UART_Write
+  C:096BH         PUBLIC        student3_ID
+  C:0978H         PUBLIC        student4_ID
+  C:0A8BH         PUBLIC        _LCD_String
+  D:0099H         PUBLIC        SBUF
+  C:0B59H         PUBLIC        UART_Init
+  C:0B18H         PUBLIC        _LCD_Char
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  C:0985H         PUBLIC        student1_name
+  C:098DH         PUBLIC        student2_name
+  C:0993H         PUBLIC        student3_name
+  C:0999H         PUBLIC        student4_name
+  C:0AB0H         PUBLIC        LCD_Init
+  D:008DH         PUBLIC        TH1
+  C:0A65H         PUBLIC        _delay_ms
+  B:0088H.6       PUBLIC        TR1
+  C:0800H         PUBLIC        _checkStudent
+  C:0AFCH         PUBLIC        _LCD_Command
+  -------         PROC          _LCD_COMMAND
+  D:0018H         SYMBOL        cmd
+  C:0AFCH         LINE#         36
+  C:0AFEH         LINE#         37
+  C:0B00H         LINE#         39
+  C:0B02H         LINE#         40
+  C:0B0AH         LINE#         42
+  C:0B0CH         LINE#         43
+  -------         ENDPROC       _LCD_COMMAND
+  -------         PROC          _LCD_CHAR
+  D:001BH         SYMBOL        dat
+  C:0B18H         LINE#         46
+  C:0B1AH         LINE#         47
+  C:0B1CH         LINE#         49
+  C:0B1EH         LINE#         50
+  C:0B26H         LINE#         52
+  C:0B28H         LINE#         53
+  -------         ENDPROC       _LCD_CHAR
+  -------         PROC          LCD_INIT
+  C:0AB0H         LINE#         56
+  C:0AB0H         LINE#         57
+  C:0AB7H         LINE#         58
+  C:0ABCH         LINE#         59
+  C:0AC1H         LINE#         60
+  C:0AC6H         LINE#         61
+  C:0ACBH         LINE#         62
+  C:0AD0H         LINE#         63
+  -------         ENDPROC       LCD_INIT
+  C:0A85H         SYMBOL        L?0062
+  -------         PROC          L?0061
+  -------         ENDPROC       L?0061
+  C:0A85H         SYMBOL        L?0062
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/19/2025  00:24:15  PAGE 4
+
+
+  -------         PROC          _LCD_STRING
+  D:0018H         SYMBOL        str
+  C:0A8BH         LINE#         66
+  C:0A91H         LINE#         67
+  C:0A9CH         LINE#         68
+  C:0AADH         LINE#         69
+  C:0AAFH         LINE#         70
+  -------         ENDPROC       _LCD_STRING
+  -------         PROC          LCD_CLEAR
+  C:0B4DH         LINE#         72
+  C:0B4DH         LINE#         73
+  C:0B52H         LINE#         74
+  -------         ENDPROC       LCD_CLEAR
+  -------         PROC          UART_INIT
+  C:0B59H         LINE#         78
+  C:0B59H         LINE#         79
+  C:0B5CH         LINE#         80
+  C:0B5FH         LINE#         81
+  C:0B62H         LINE#         82
+  C:0B64H         LINE#         83
+  -------         ENDPROC       UART_INIT
+  -------         PROC          UART_READ
+  C:0B71H         LINE#         85
+  C:0B71H         LINE#         86
+  C:0B74H         LINE#         87
+  C:0B76H         LINE#         88
+  C:0B78H         LINE#         89
+  -------         ENDPROC       UART_READ
+  -------         PROC          _UART_WRITE
+  D:0007H         SYMBOL        c
+  C:0B79H         LINE#         91
+  C:0B79H         LINE#         92
+  C:0B7BH         LINE#         93
+  C:0B7EH         LINE#         94
+  C:0B80H         LINE#         95
+  -------         ENDPROC       _UART_WRITE
+  -------         PROC          _UART_STRING
+  D:0018H         SYMBOL        str
+  C:0AD7H         LINE#         97
+  C:0ADDH         LINE#         98
+  C:0AE8H         LINE#         99
+  C:0AF9H         LINE#         100
+  C:0AFBH         LINE#         101
+  -------         ENDPROC       _UART_STRING
+  C:0A55H         SYMBOL        L?0057
+  C:0A61H         SYMBOL        L?0058
+  -------         PROC          L?0056
+  -------         ENDPROC       L?0056
+  C:0A55H         SYMBOL        L?0057
+  C:0A61H         SYMBOL        L?0058
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        ms
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0A65H         LINE#         104
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/19/2025  00:24:15  PAGE 5
+
+
+  C:0A65H         LINE#         106
+  C:0A6FH         LINE#         107
+  C:0A84H         LINE#         108
+  -------         ENDPROC       _DELAY_MS
+  C:099FH         SYMBOL        L?0060
+  -------         PROC          L?0059
+  -------         ENDPROC       L?0059
+  C:099FH         SYMBOL        L?0060
+  -------         PROC          _STRCMP_CODE
+  D:0018H         SYMBOL        ram_str
+  D:001BH         SYMBOL        code_str
+  C:09A5H         LINE#         111
+  C:09ABH         LINE#         112
+  C:09C2H         LINE#         113
+  C:09C5H         LINE#         114
+  C:09C7H         LINE#         115
+  C:09D2H         LINE#         116
+  C:09DDH         LINE#         117
+  C:09DFH         LINE#         118
+  C:09F9H         LINE#         119
+  -------         ENDPROC       _STRCMP_CODE
+  -------         PROC          _CHECKSTUDENT
+  D:0015H         SYMBOL        cardID
+  C:0800H         LINE#         122
+  C:0806H         LINE#         123
+  C:0809H         LINE#         125
+  C:0817H         LINE#         126
+  C:0820H         LINE#         127
+  C:0825H         LINE#         128
+  C:0828H         LINE#         129
+  C:082EH         LINE#         130
+  C:082EH         LINE#         131
+  C:0831H         LINE#         132
+  C:083FH         LINE#         133
+  C:0848H         LINE#         134
+  C:084DH         LINE#         135
+  C:0850H         LINE#         136
+  C:0856H         LINE#         137
+  C:0856H         LINE#         138
+  C:0858H         LINE#         139
+  C:0866H         LINE#         140
+  C:086FH         LINE#         141
+  C:0874H         LINE#         142
+  C:0877H         LINE#         143
+  C:087DH         LINE#         144
+  C:087DH         LINE#         145
+  C:087FH         LINE#         146
+  C:088FH         LINE#         147
+  C:0896H         LINE#         148
+  C:089BH         LINE#         149
+  C:089EH         LINE#         150
+  C:08A7H         LINE#         151
+  C:08ADH         LINE#         152
+  C:08AFH         LINE#         153
+  C:08AFH         LINE#         154
+  C:08B6H         LINE#         155
+  C:08BBH         LINE#         156
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/19/2025  00:24:15  PAGE 6
+
+
+  C:08C4H         LINE#         157
+  C:08CDH         LINE#         158
+  C:08CDH         LINE#         159
+  C:08D4H         LINE#         160
+  C:08D7H         LINE#         161
+  -------         ENDPROC       _CHECKSTUDENT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0008H         SYMBOL        rfid_id
+  -------         ENDDO         
+  C:09FAH         LINE#         165
+  C:09FAH         LINE#         169
+  C:09FDH         LINE#         170
+  C:0A00H         LINE#         172
+  C:0A09H         LINE#         173
+  C:0A0EH         LINE#         174
+  C:0A17H         LINE#         175
+  C:0A1EH         LINE#         177
+  C:0A1EH         LINE#         178
+  C:0A21H         LINE#         179
+  C:0A2AH         LINE#         182
+  C:0A2DH         LINE#         183
+  C:0A2FH         LINE#         184
+  C:0A2FH         LINE#         185
+  C:0A31H         LINE#         188
+  C:0A33H         LINE#         189
+  C:0A3CH         LINE#         190
+  C:0A40H         LINE#         191
+  C:0A43H         LINE#         193
+  C:0A4BH         LINE#         196
+  C:0A52H         LINE#         197
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        RFID_ATTENDANCE
+
+  -------         MODULE        ?C?CLDPTR
+  C:0B34H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 035CH BYTE (41%) *
+******************************************************************************
+
+Program Size: data=31.0 xdata=0 code=900
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
