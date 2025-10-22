@@ -58,7 +58,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ### ***EM - 18 Module Connections*** - 
 
-| RFID Pin | Connection |
+| EM-18 Pin | Connection |
 |----------|------------|
 | VCC | +5V rail |
 | GND | GND rail |
@@ -84,5 +84,3 @@ This RFID-based attendance system automatically records student attendance when 
 - Required packages:
   - `pyserial`
   - `datetime`
-    ├── Schematic.pdf
-    └── README.md
