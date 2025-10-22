@@ -15,12 +15,12 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Features
 
-- **Real-time Display**: Shows student name and attendance status on LCD
-- **Automated Logging**: Records attendance with precise timestamps
-- **CSV Export**: Stores data in comma-separated values format for easy analysis
-- **Attendance Reports**: Generates summary with percentage attendance
-- **UART Communication**: Enables seamless data transfer between microcontroller and computer
-- **Multi-student Support**: Capable of handling multiple RFID cards
+- ***Real-time Display***: Shows student name and attendance status on LCD
+- ***Automated Logging***: Records attendance with precise timestamps
+- ***CSV Export***: Stores data in comma-separated values format for easy analysis
+- ***Attendance Reports***: Generates summary with percentage attendance
+- ***UART Communication***: Enables seamless data transfer between microcontroller and computer
+- ***Multi-student Support***: Capable of handling multiple RFID cards
 
 ## Components Required
 
@@ -39,7 +39,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Hardware Connections
 
-### LCD (16x2) Connections - 
+### ***LCD (16x2) Connections*** -
 
 | LCD Pin | Connection |
 |---------|------------|
@@ -56,7 +56,7 @@ This RFID-based attendance system automatically records student attendance when 
 | Pin 15 (LED+) | +5V (via 220Ω resistor) |
 | Pin 16 (LED-) | GND |
 
-### RFID Module Connections - 
+### ***EM - 18 Module Connections*** - 
 
 | RFID Pin | Connection |
 |----------|------------|
@@ -64,7 +64,7 @@ This RFID-based attendance system automatically records student attendance when 
 | GND | GND rail |
 | TX | P3.0 (RXD of 8051) |
 
-### USB-UART Module Connections - 
+### ***USB - UART Module Connections*** - 
 
 | UART Pin | Connection |
 |----------|------------|
@@ -75,11 +75,11 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Software Requirements
 
-### For Microcontroller:
+### ***For Microcontroller*** - 
 - Keil μVision IDE
 - 8051 compiler
 
-### For Python Scripts:
+### ***For Python Scripts*** - 
 - Python 3.6 or higher
 - Required packages:
   - `pyserial`
