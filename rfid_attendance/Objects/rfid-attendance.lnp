@@ -1,0 +1,3 @@
+".\Objects\rfid-attendance.obj" 
+TO ".\Objects\rfid-attendance" 
+PRINT(".\Listings\rfid-attendance.m51") RAMSIZE(256) 
