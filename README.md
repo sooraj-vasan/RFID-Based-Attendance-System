@@ -86,3 +86,25 @@ This RFID-based attendance system automatically records student attendance when 
   - `pyserial`
   - `datetime`
 
+## File Structure
+
+RFID Based Attendance System/
+│
+│── attendance.txt
+│── attendance_tracker.py
+│── attendance_logger.py
+│   
+│
+├── rfid_id_10/
+│   ├── rfid-id-10.uvgui.soova
+│   ├── rfid-id-10.uvopt
+|   ├── rfid-id-10 (Keil Project)
+│   └── rfid-id-10.c
+│
+├── Data/
+│   ├── attendance.csv
+│   └── students.json
+│
+└── Documentation/
+    ├── Schematic.pdf
+    └── README.md
