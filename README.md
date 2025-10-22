@@ -90,4 +90,4 @@ This RFID-based attendance system automatically records student attendance when 
 ## Folders Explanation
 
 - ***rfid-id-10***: This is used to get the unique 10-character ID number of the RFID card.
-- ***rfid_attendance***: This is used to display the student name and "present" on the LCD based the the RFID number.
+- ***rfid_attendance***: This is used to display the student name and "present" on the LCD based on the RFID number.
