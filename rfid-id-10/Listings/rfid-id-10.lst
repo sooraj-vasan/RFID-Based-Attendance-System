@@ -1,0 +1,144 @@
+C51 COMPILER V9.60.7.0   RFID_ID_10                                                        10/18/2025 17:45:55 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE RFID_ID_10
+OBJECT MODULE PLACED IN .\Objects\rfid-id-10.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE rfid-id-10.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\rfid-id-10.lst) TABS(2) OBJECT(.\Objects\rfid-id-10.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include <string.h>
+   3          
+   4          #define LCD P2          // LCD data pins on Port 2
+   5          
+   6          sbit RS = P3^2;         // LCD RS pin on P3.2
+   7          sbit EN = P3^3;         // LCD EN pin on P3.3
+   8          
+   9          // UART prototypes
+  10          void UART_Init();
+  11          char UART_Read();
+  12          
+  13          // LCD prototypes
+  14          void LCD_Cmd(unsigned char cmd);
+  15          void LCD_Char(unsigned char dat);
+  16          void LCD_String(char *str);
+  17          void LCD_Init();
+  18          void delay_ms(unsigned int ms);
+  19          
+  20          void main() {
+  21   1          char tag[11];  // 10 characters + null
+  22   1          unsigned char i;
+  23   1          char start_byte;
+  24   1      
+  25   1          LCD_Init();
+  26   1          UART_Init();
+  27   1      
+  28   1          LCD_String("Scan RFID Card");
+  29   1      
+  30   1          while(1) {
+  31   2              // Wait for start of RFID data
+  32   2              do {
+  33   3                  start_byte = UART_Read();
+  34   3              } while(start_byte != 0x02 && start_byte != 0x0A);
+  35   2              
+  36   2              // Read 10 characters (actual Tag ID)
+  37   2              for(i=0; i<10; i++) {
+  38   3                  tag[i] = UART_Read();
+  39   3              }
+  40   2              tag[10] = '\0';
+  41   2      
+  42   2              // Read and discard remaining bytes
+  43   2              for(i=0; i<3; i++) {
+  44   3                  UART_Read();
+  45   3              }
+  46   2      
+  47   2              LCD_Cmd(0x01);
+  48   2              LCD_String("Tag ID:");
+  49   2              LCD_Cmd(0xC0);
+  50   2              LCD_String(tag);
+  51   2      
+  52   2              delay_ms(2000);
+  53   2              LCD_Cmd(0x01);
+  54   2              LCD_String("Scan Next...");
+C51 COMPILER V9.60.7.0   RFID_ID_10                                                        10/18/2025 17:45:55 PAGE 2   
+
+  55   2          }
+  56   1      }
+  57          
+  58          /* UART Functions */
+  59          void UART_Init() {
+  60   1          SCON = 0x50;   // Serial mode 1, REN enabled
+  61   1          TMOD = 0x20;   // Timer1 Mode2
+  62   1          TH1 = 0xFD;    // 9600 baud
+  63   1          TR1 = 1;
+  64   1      }
+  65          
+  66          char UART_Read() {
+  67   1          while(RI == 0);
+  68   1          RI = 0;
+  69   1          return SBUF;
+  70   1      }
+  71          
+  72          /* LCD Functions */
+  73          void LCD_Init() {
+  74   1          delay_ms(20);
+  75   1          LCD_Cmd(0x02);
+  76   1          LCD_Cmd(0x28);
+  77   1          LCD_Cmd(0x0C);
+  78   1          LCD_Cmd(0x06);
+  79   1          LCD_Cmd(0x01);
+  80   1          delay_ms(2);
+  81   1      }
+  82          
+  83          void LCD_Cmd(unsigned char cmd) {
+  84   1          RS = 0;
+  85   1          LCD = (LCD & 0x0F) | (cmd & 0xF0);
+  86   1          EN = 1; delay_ms(1); EN = 0;
+  87   1          delay_ms(1);
+  88   1      
+  89   1          LCD = (LCD & 0x0F) | (cmd << 4);
+  90   1          EN = 1; delay_ms(1); EN = 0;
+  91   1          delay_ms(2);
+  92   1      }
+  93          
+  94          void LCD_Char(unsigned char dat) {
+  95   1          RS = 1;
+  96   1          LCD = (LCD & 0x0F) | (dat & 0xF0);
+  97   1          EN = 1; delay_ms(1); EN = 0;
+  98   1          delay_ms(1);
+  99   1      
+ 100   1          LCD = (LCD & 0x0F) | (dat << 4);
+ 101   1          EN = 1; delay_ms(1); EN = 0;
+ 102   1          delay_ms(2);
+ 103   1      }
+ 104          
+ 105          void LCD_String(char *str) {
+ 106   1          while(*str) {
+ 107   2              LCD_Char(*str++);
+ 108   2          }
+ 109   1      }
+ 110          
+ 111          /* Delay */
+ 112          void delay_ms(unsigned int ms) {
+ 113   1          unsigned int i, j;
+ 114   1          for(i=0; i<ms; i++)
+ 115   1              for(j=0; j<1275; j++);
+ 116   1      }
+C51 COMPILER V9.60.7.0   RFID_ID_10                                                        10/18/2025 17:45:55 PAGE 3   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    317    ----
+   CONSTANT SIZE    =     36    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      17
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
