@@ -1,6 +1,6 @@
 # RFID Based Attendance System
 
-An automated attendance tracking system using RFID technology that records student attendance and generates detailed reports.
+An automated attendance tracking system using RFID technology that records student attendance and generates detailed reports. This is done using AT89S52 Microcontroller, EM-18 RFID reader module and FT232 USB - UART module.
 
 ## Table of Contents
 - [Overview](#overview)
