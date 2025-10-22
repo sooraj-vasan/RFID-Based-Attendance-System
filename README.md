@@ -8,11 +8,7 @@ An automated attendance tracking system using RFID technology that records stude
 - [Components Required](#components-required)
 - [Hardware Connections](#hardware-connections)
 - [Software Requirements](#software-requirements)
-- [Installation & Setup](#installation--setup)
-- [Usage](#usage)
 - [File Structure](#file-structure)
-- [Customization Options](#customization-options)
-- [Troubleshooting](#troubleshooting)
 
 ## Overview
 
