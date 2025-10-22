@@ -1,0 +1,3 @@
+".\Objects\rfid-id-10.obj" 
+TO ".\Objects\rfid-id-10" 
+PRINT(".\Listings\rfid-id-10.m51") RAMSIZE(256) 
