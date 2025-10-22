@@ -15,12 +15,12 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Features
 
-- ***Real-time Display***: Shows student name and attendance status on LCD
-- ***Automated Logging***: Records attendance with precise timestamps
-- ***CSV Export***: Stores data in comma-separated values format for easy analysis
-- ***Attendance Reports***: Generates summary with percentage attendance
-- ***UART Communication***: Enables seamless data transfer between microcontroller and computer
-- ***Multi-student Support***: Capable of handling multiple RFID cards
+- ***Real-time Display***: Shows student name and attendance status on LCD.
+- ***Automated Logging***: Records attendance with precise timestamps.
+- ***CSV Export***: Stores data in comma-separated values format for easy analysis.
+- ***Attendance Reports***: Generates summary with percentage attendance.
+- ***UART Communication***: Enables seamless data transfer between microcontroller and computer.
+- ***Multi-student Support***: Capable of handling multiple RFID cards.
 
 ## Components Required
 
@@ -75,11 +75,11 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Software Requirements
 
-### ***For Microcontroller*** - 
+### ***1. For Microcontroller*** - 
 - Keil μVision IDE
 - 8051 compiler
 
-### ***For Python Scripts*** - 
+### ***2. For Python Scripts*** - 
 - Python 3.6 or higher
 - Required packages:
   - `pyserial`
