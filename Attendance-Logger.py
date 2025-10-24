@@ -2,7 +2,7 @@ import serial
 from datetime import datetime
 import time
 
-PORT = "COM8"
+PORT = "COM8" # Use the port of your system from Device Manager
 BAUD = 9600
 
 print("🚀 RFID Attendance Logger Started...")
