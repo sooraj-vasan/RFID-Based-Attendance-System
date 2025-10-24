@@ -1,10 +1,10 @@
 # RFID Based Attendance System
 
-An automated attendance tracking system using RFID technology that records student attendance and generates detailed reports. This is done using AT89S52 Microcontroller, EM-18 RFID reader module and FT232 USB - UART module.
+An automated attendance tracking system using RFID technology that records student attendance and generates detailed reports. This is done using `AT89S52` Microcontroller, `EM-18` RFID reader module and `FT232` USB - UART module.
 
 ## Overview
 
-This RFID-based attendance system automatically records student attendance when they place their RFID cards near the EM-18 reader module. The system displays student information on an LCD screen and logs attendance data with timestamps to a CSV file. Additional Python scripts provide attendance summary reports with percentage calculations.
+This RFID-based attendance system automatically records student attendance when they place their RFID cards near the `EM-18` reader module. The system displays student information on an LCD screen and logs attendance data with timestamps to a CSV file. Additional Python scripts provide attendance summary reports with percentage calculations.
 
 ## Features
 
@@ -19,13 +19,13 @@ This RFID-based attendance system automatically records student attendance when 
 
 | Component | Quantity |
 |-----------|----------|
-| AT89S52 Microcontroller | 1 |
-| EM-18 RFID Reader Module | 1 |
-| 16x2 LCD Display | 1 |
+| `AT89S52` Microcontroller | 1 |
+| `EM-18` RFID Reader Module | 1 |
+| `16x2` LCD Display | 1 |
 | RFID Cards/Tags | Multiple |
-| FT232 USB-UART Module | 1 |
-| 220Ω Resistor | 1 |
-| 10K Potentiometer | 1 |
+| `FT232` USB-UART Module | 1 |
+| `220Ω` Resistor | 1 |
+| `10K` Potentiometer | 1 |
 | Jumper Wires | Multiple |
 | Breadboard | 1 |
 | Power Supply | 1 |
