@@ -80,7 +80,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Folders Explanation
 
-- `RFID ID`: Get the unique 10-character ID number of the RFID card.
+- `RFID ID`: Get the unique 10-character ID number of the RFID card displayed on the LCD.
 - `RFID Attendance`: Display the student name and "present" on the LCD based on the RFID number.
 - `Attendance-Logger.py`: Log the Name, Attendance Status and Time Stamp of each student in a .txt file.
 - `Attendance-Tracker.py`: Show the No. of classes attended and Attendance Percentage of each student.
