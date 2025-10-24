@@ -36,35 +36,35 @@ This RFID-based attendance system automatically records student attendance when 
 
 | LCD Pin | Connection |
 |---------|------------|
-| Pin 1 (GND) | GND rail |
-| Pin 2 (VCC) | +5V rail |
-| Pin 3 (VEE) | Potentiometer middle pin |
-| Pin 4 (RS) | P3.2 |
-| Pin 5 (RW) | GND |
-| Pin 6 (EN) | P3.3 |
-| Pin 11 (D4) | P2.4 |
-| Pin 12 (D5) | P2.5 |
-| Pin 13 (D6) | P2.6 |
-| Pin 14 (D7) | P2.7 |
-| Pin 15 (LED+) | +5V (via 220Ω resistor) |
-| Pin 16 (LED-) | GND |
+| Pin 1 (`GND`) | `GND` rail |
+| Pin 2 (`VCC`) | `+5V` rail |
+| Pin 3 (`VEE`) | Potentiometer middle pin |
+| Pin 4 (`RS`) | P3.2 |
+| Pin 5 (`RW`) | `GND` |
+| Pin 6 (`EN`) | P3.3 |
+| Pin 11 (`D4`) | P2.4 |
+| Pin 12 (`D5`) | P2.5 |
+| Pin 13 (`D6`) | P2.6 |
+| Pin 14 (`D7`) | P2.7 |
+| Pin 15 (`LED+`) | `+5V` (via `220Ω` resistor) |
+| Pin 16 (`LED-`) | `GND` |
 
 ### ***2. EM - 18 Module Connections*** - 
 
 | EM-18 Pin | Connection |
 |----------|------------|
-| VCC | +5V rail |
-| GND | GND rail |
-| TX | P3.0 (RXD of 8051) |
+| `VCC` | `+5V` rail |
+| `GND` | `GND` rail |
+| `TX` | P3.0 (`RXD` of 8051) |
 
 ### ***3. USB - UART Module Connections*** - 
 
 | FT232 Pin | Connection |
 |----------|------------|
-| VCC | +5V rail |
-| GND | GND rail |
-| RXD | P3.1 (TXD of 8051) |
-| TXD | (Optional) P3.0 |
+| `VCC` | `+5V` rail |
+| `GND` | `GND` rail |
+| `RXD` | P3.1 (`TXD` of 8051) |
+| `TXD` | (Optional) P3.0 |
 
 ## Software Requirements
 
