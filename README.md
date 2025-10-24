@@ -32,7 +32,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Hardware Connections
 
-### ***1. LCD (16x2) Connections*** -
+### ***LCD ('16x2') Connections*** -
 
 | LCD Pin | Connection |
 |---------|------------|
@@ -49,7 +49,7 @@ This RFID-based attendance system automatically records student attendance when 
 | Pin 15 (`LED+`) | `+5V` (via `220Ω` resistor) |
 | Pin 16 (`LED-`) | `GND` |
 
-### ***2. EM - 18 Module Connections*** - 
+### ***'EM - 18' Module Connections*** - 
 
 | EM-18 Pin | Connection |
 |----------|------------|
@@ -57,7 +57,7 @@ This RFID-based attendance system automatically records student attendance when 
 | `GND` | `GND` rail |
 | `TX` | P3.0 (`RXD` of 8051) |
 
-### ***3. USB - UART Module Connections*** - 
+### ***USB - UART Module Connections*** - 
 
 | FT232 Pin | Connection |
 |----------|------------|
@@ -68,11 +68,11 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## Software Requirements
 
-### ***1. For Microcontroller*** - 
+### ***For Microcontroller*** - 
 - Keil μVision IDE
 - 8051 compiler
 
-### ***2. For Python Scripts*** - 
+### ***For Python Scripts*** - 
 - Python 3.6 or higher
 - Required packages:
   - `pyserial`
