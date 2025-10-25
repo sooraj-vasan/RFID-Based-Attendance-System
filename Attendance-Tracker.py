@@ -43,4 +43,4 @@ def analyze_attendance(file_path):
 
 # Run the analysis
 if __name__ == "__main__":
-    analyze_attendance(r'C:\Users\soova\Downloads\RFID Based Attendance System\attendance.txt')
+    analyze_attendance(r'C:\Users\soova\Downloads\RFID Based Attendance System\attendance.txt') # Provide the file path of your .txt file 
