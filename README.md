@@ -32,7 +32,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## 🔧Hardware Connections
 
-### ***LCD*** ('16x2') ***Connections*** -
+### 📺***LCD*** ('16x2') ***Connections*** -
 
 | LCD Pin | Connection |
 |---------|------------|
@@ -49,7 +49,7 @@ This RFID-based attendance system automatically records student attendance when 
 | Pin 15 (`LED+`) | `+5V` (via `220Ω` resistor) |
 | Pin 16 (`LED-`) | `GND` |
 
-### ***RFID Module Connections*** - 
+### 🪪***RFID Module Connections*** - 
 
 | Pin | Connection |
 |----------|------------|
@@ -57,7 +57,7 @@ This RFID-based attendance system automatically records student attendance when 
 | `GND` | `GND` rail |
 | `TX` | P3.0 (`RXD` of 8051) |
 
-### ***UART Module Connections*** - 
+### 🔌***UART Module Connections*** - 
 
 | Pin | Connection |
 |----------|------------|
