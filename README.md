@@ -72,7 +72,7 @@ This RFID-based attendance system automatically records student attendance when 
 2. To get the unique RFID IDs of each card, burn the HEX file from the `RFID ID` folder into your `AT89S52` microcontroller (UART module connection not required).  
 3. After burning the HEX file, place your RFID card in front of the `EM-18` module and note down the RFID ID displayed on the LCD.  
 4. For the attendance system, replace the card IDs and student names with your own in the `RFID Attendance` folder. Burn the HEX file into the `AT89S52`. When you place the card near the `EM-18`, the student name and “PRESENT” will be shown on the LCD.  
-5. For attendance logging, connect the `FT232` UART module as per the given connections. Connect it to your PC/laptop, check the `COM` port, and replace it in 1Attendance-Logger.py`.  
+5. For attendance logging, connect the `FT232` UART module as per the given connections. Connect it to your PC/laptop, check the `COM` port, and replace it in 'Attendance-Logger.py'.  
 6. Run the program — raw data (`Student Name PRESENT at Timestamp`) will appear in the terminal and also be saved in `attendance.txt` (CSV format).  
 7. Run `Attendance-Tracker.py` to view each student’s attendance details, total classes attended, and attendance percentage in the terminal.
 
