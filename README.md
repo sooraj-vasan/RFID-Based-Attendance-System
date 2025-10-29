@@ -1,12 +1,12 @@
-# 🏷️ RFID Based Attendance System
+# 🏷️RFID Based Attendance System
 
 An automated attendance tracking system using RFID technology that records student attendance and generates detailed reports. This is done using `AT89S52` Microcontroller, `EM-18` RFID reader module and `FT232` USB - UART module.
 
-## 📝 Overview
+## 📝Overview
 
 This RFID-based attendance system automatically records student attendance when they place their RFID cards near the `EM-18` reader module. The system displays student information on an LCD screen and logs attendance data with timestamps to a CSV file. Additional Python scripts provide attendance summary reports with percentage calculations.
 
-## 🚀 Features
+## 🚀Features
 
 - ***Real-time Display***: Shows student name and attendance status on LCD.
 - ***Automated Logging***: Records attendance with precise timestamps.
@@ -15,7 +15,7 @@ This RFID-based attendance system automatically records student attendance when 
 - ***UART Communication***: Enables seamless data transfer between microcontroller and computer.
 - ***Multi-student Support***: Capable of handling multiple RFID cards.
 
-## ⚙️ Components Required
+## ⚙️Components Required
 
 | Component | Quantity |
 |-----------|----------|
@@ -32,7 +32,7 @@ This RFID-based attendance system automatically records student attendance when 
 
 ## 🔧Hardware Connections
 
-### 📺 **LCD** (16x2) **Connections** -
+### 📺**LCD** (16x2) **Connections** -
 
 | LCD Pin | Connection |
 |---------|------------|
@@ -49,7 +49,7 @@ This RFID-based attendance system automatically records student attendance when 
 | Pin 15 (`LED+`) | `+5V` (via `220Ω` resistor) |
 | Pin 16 (`LED-`) | `GND` |
 
-### 🪪 **RFID Module Connections** - 
+### 🪪**RFID Module Connections** - 
 
 | Pin | Connection |
 |----------|------------|
@@ -57,7 +57,7 @@ This RFID-based attendance system automatically records student attendance when 
 | `GND` | `GND` rail |
 | `TX` | `P3.0` (`RXD` of 8051) |
 
-### 🔌 **UART Module Connections** - 
+### 🔌**UART Module Connections** - 
 
 | Pin | Connection |
 |----------|------------|
@@ -66,7 +66,7 @@ This RFID-based attendance system automatically records student attendance when 
 | `RXD` | `P3.1` (`TXD` of 8051) |
 | `TXD` | (Optional) `P3.0` |
 
-## 🪜 Procedure
+## 🪜Procedure
 
 1. Connect the circuit as per the hardware connections.  
 2. To get the unique RFID IDs of each card, burn the HEX file from the `RFID ID` folder into your `AT89S52` microcontroller (UART module connection not required).  
@@ -76,7 +76,7 @@ This RFID-based attendance system automatically records student attendance when 
 6. Run the program — raw data (`Student Name PRESENT at Timestamp`) will appear in the terminal and also be saved in `attendance.txt` (CSV format).  
 7. Run `Attendance-Tracker.py` to view each student’s attendance details, total classes attended, and attendance percentage in the terminal.
 
-## 💻 Software Requirements
+## 💻Software Requirements
 
 ### ***For Microcontroller*** - 
 - Keil μVision IDE
@@ -88,7 +88,7 @@ This RFID-based attendance system automatically records student attendance when 
   - `pyserial`
   - `datetime`
 
-## 📂 Folders Explanation
+## 📂Folders Explanation
 
 - `RFID ID`: Get the unique 10-character ID number of the RFID card displayed on the LCD.
 - `RFID Attendance`: Display the student name and "present" on the LCD based on the RFID number.
